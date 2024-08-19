@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ResultUserController">
+    <content>
+        <BorderPane prefHeight="418.0" prefWidth="681.0">
+            <left>
+                <ListView fx:id="executionListView" onMouseClicked="#showHistogram" prefHeight="208.0" prefWidth="360.0" BorderPane.alignment="CENTER" />
+            </left>
+            <bottom>
+                <FlowPane fx:id="executionResult" prefHeight="135.0" prefWidth="411.0" BorderPane.alignment="BOTTOM_RIGHT">
+                    <children>
+                        <TreeView fx:id="treeOfHistogram" prefHeight="210.0" prefWidth="360.0" />
+                        <LineChart fx:id="graphOfEntities" prefHeight="210.0" prefWidth="313.0">
+                            <xAxis>
+                                <NumberAxis side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" />
+                            </yAxis>
+                        </LineChart>
+                    </children></FlowPane>
+            </bottom>
+            <right>
+                <GridPane prefHeight="267.0" prefWidth="486.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="384.99998474121094" minWidth="10.0" prefWidth="360.3333333333333" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="384.99998474121094" minWidth="10.0" prefWidth="51.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="80.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="80.99999237060547" minHeight="10.0" prefHeight="80.99999237060547" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.99999237060547" minHeight="10.0" prefHeight="61.33333333333333" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="101.00001525878906" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                        <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" />
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="rerunButton" mnemonicParsing="false" onAction="#onRerunButtonClicked" text="Rerun" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <HBox prefHeight="37.0" prefWidth="359.0" GridPane.rowIndex="5">
+                            <children>
+                                <Button fx:id="pauseButton" mnemonicParsing="false" onAction="#onPauseButtonClicked" text="Pause" />
+                                <Button fx:id="resumeButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onResumeButtonClicked" text="Resume" />
+                                <Button fx:id="stopButton" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#onStopButtonClicked" text="Stop" />
+                            </children>
+                        </HBox>
+                        <VBox GridPane.rowIndex="2">
+                            <children>
+                                <HBox>
+                                    <children>
+                                        <Label prefHeight="17.0" prefWidth="63.0" text="Current tick" />
+                                        <Label fx:id="numberOfTick" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="63.0" />
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="17.0" prefWidth="146.0">
+                                    <children>
+                                        <Label text="seconds" />
+                                        <Label fx:id="numberOfSeconds" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="45.0" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <TableView fx:id="tableOfEntities" prefHeight="111.0" prefWidth="338.0" GridPane.rowSpan="2">
+                            <columns>
+
+
+                            </columns>
+                        </TableView>
+                    </children>
+                </GridPane>
+            </right></BorderPane>
+    </content>
+</ScrollPane>

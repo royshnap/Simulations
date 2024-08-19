@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="277.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <BorderPane prefHeight="277.0" prefWidth="510.0">
+         <top>
+            <Label text="Login" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <GridPane prefHeight="242.0" prefWidth="334.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.3333218892415" minWidth="10.0" prefWidth="127.66666666666666" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.3333218892415" minWidth="10.0" prefWidth="52.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.6666742960612" minWidth="10.0" prefWidth="204.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="459.0" minWidth="10.0" prefWidth="134.66666666666669" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="172.66666666666666" minHeight="5.000002384185791" prefHeight="172.66666666666666" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="156.9999976158142" minHeight="1.3333257039388116" prefHeight="19.333333333333343" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="145.00000762939453" minHeight="10.0" prefHeight="49.333333333333314" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onButtonLogin" text="Login" GridPane.columnIndex="1" />
+                  <TextField fx:id="usernameTextField" promptText="Write username here" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

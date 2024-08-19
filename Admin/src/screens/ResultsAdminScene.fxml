@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ResultAdminController">
+    <content>
+        <BorderPane prefHeight="565.0" prefWidth="833.0">
+            <left>
+                <ListView fx:id="executionListView" onMouseClicked="#showHistogram" prefHeight="355.0" prefWidth="367.0" BorderPane.alignment="CENTER" />
+            </left>
+            <bottom>
+                <FlowPane fx:id="executionResult" prefHeight="210.0" prefWidth="761.0" BorderPane.alignment="BOTTOM_RIGHT">
+                    <children>
+                        <TreeView fx:id="treeOfHistogram" prefHeight="210.0" prefWidth="416.0" />
+                        <LineChart fx:id="graphOfEntities" prefHeight="210.0" prefWidth="358.0">
+                            <xAxis>
+                                <NumberAxis side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" />
+                            </yAxis>
+                        </LineChart>
+                    </children></FlowPane>
+            </bottom>
+            <right>
+                <GridPane prefHeight="267.0" prefWidth="486.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="391.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="384.99998474121094" minWidth="10.0" prefWidth="62.333333333333314" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="35.333333333333314" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="80.99999237060547" minHeight="10.0" prefHeight="80.99999237060547" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.99999237060547" minHeight="10.0" prefHeight="71.33334859212239" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="41.999999999999986" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="101.00001525878906" minHeight="10.0" prefHeight="26.666666666666686" vgrow="SOMETIMES" />
+                        <RowConstraints />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                    </rowConstraints>
+                    <children>
+
+                        <VBox GridPane.rowIndex="2">
+                            <children>
+                                <HBox>
+                                    <children>
+                                        <Label prefHeight="17.0" prefWidth="63.0" text="Current tick" />
+                                        <Label fx:id="numberOfTick" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="63.0" />
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="17.0" prefWidth="146.0">
+                                    <children>
+                                        <Label text="seconds" />
+                                        <Label fx:id="numberOfSeconds" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="45.0" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <TableView fx:id="tableOfEntities" prefHeight="111.0" prefWidth="363.0" GridPane.rowSpan="2">
+                            <columns>
+
+
+                            </columns>
+                        </TableView>
+                    </children>
+                </GridPane>
+            </right></BorderPane>
+    </content>
+</ScrollPane>

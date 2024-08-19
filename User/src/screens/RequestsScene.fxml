@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RequestsController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="504.0" prefWidth="788.0">
+         <children>
+            <BorderPane layoutY="18.0">
+               <top>
+                  <GridPane prefHeight="168.0" prefWidth="792.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.9999771118164" minWidth="0.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="651.3333257039388" minWidth="10.0" prefWidth="138.00001525878906" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="651.3333257039388" minWidth="3.3333257039388116" prefWidth="79.33333333333334" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.99999999999994" minWidth="0.0" prefWidth="115.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.99999999999994" minWidth="10.0" prefWidth="369.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="156.0" minHeight="0.0" prefHeight="29.666670481363933" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="324.0" minHeight="10.0" prefHeight="41.66666666666666" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="324.0" minHeight="10.0" prefHeight="40.33333333333333" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="324.0" minHeight="10.0" prefHeight="43.33333333333333" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="New Request" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="Simulation name:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Amount of running" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Termination conditions" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <RadioButton fx:id="byUserRadioChoice" mnemonicParsing="false" onAction="#handleRadioButtonClick" text="By user" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <RadioButton fx:id="byTicksRadioChoice" mnemonicParsing="false" onAction="#handleRadioButtonClick" text="By ticks/seconds" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="amountRunningTextField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="simulationNameTextfied" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="simulationNameLabel" prefHeight="17.0" prefWidth="111.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label fx:id="amountRunningLabel" prefHeight="17.0" prefWidth="103.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button fx:id="submitButton" mnemonicParsing="false" onAction="#onSubmitButton" text="submit" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <Label fx:id="radioChoiceLabel" prefHeight="17.0" prefWidth="176.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </top>
+               <bottom>
+                  <TableView fx:id="requestTable" onMouseClicked="#runSimulation" prefHeight="265.0" prefWidth="792.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="requestNumberCol" prefWidth="125.99998986721039" text="Request's Number" >
+                        <cellValueFactory>
+                            <PropertyValueFactory property="requestNumber" />
+                        </cellValueFactory>
+                    </TableColumn>
+                      <TableColumn fx:id="simulationNameCol" prefWidth="123.99999237060547" text="Simulation Name" >
+                        <cellValueFactory>
+                            <PropertyValueFactory property="simulationName" />
+                        </cellValueFactory>
+                      </TableColumn>
+                        <TableColumn fx:id="amountOfRunningCol" prefWidth="118.66664123535156" text="Amount of Running" >
+                            <cellValueFactory>
+                                <PropertyValueFactory property="amountOfRunning" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="approvedCol" prefWidth="129.66665649414062" text="Approved \ Cancelled" >
+                            <cellValueFactory>
+                                <PropertyValueFactory property="requestStatus" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="stillRunningCol" prefWidth="151.3333740234375" text="Still Running (num)" >
+                            <cellValueFactory>
+                                <PropertyValueFactory property="amountOfSimulationsRuunning" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="endingCol" prefWidth="187.33331298828125" text="Ending (num)" >
+                        <cellValueFactory>
+                            <PropertyValueFactory property="amountOfSimulationEnding" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    </columns>
+                  </TableView>
+               </bottom>
+            </BorderPane>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

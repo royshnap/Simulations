@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Server/web/WEB-INF/lib/okio-2.8.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Server/web/WEB-INF/lib/okhttp-4.9.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Server/web/WEB-INF/lib/kotlin-stdlib-1.4.10.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Server/web/WEB-INF/lib/gson-2.8.8.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Server/web/WEB-INF/lib/annotations-13.0.jar!/" />
+          <root url="file://$MODULE_DIR$/../.." />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../Server/web/WEB-INF/lib/gson-2.8.8-sources.jar!/" />
+          <root url="file://$MODULE_DIR$/../GUI/src" />
+          <root url="file://$MODULE_DIR$/../Server/Logic/src" />
+          <root url="file://$MODULE_DIR$/../Server/src" />
+          <root url="file://$MODULE_DIR$/src" />
+          <root url="file://$MODULE_DIR$/../out/artifacts/Server_Web_exploded/WEB-INF/lib/Admin/src" />
+          <root url="file://$MODULE_DIR$/../out/artifacts/Server_Web_exploded/WEB-INF/lib/GUI/src" />
+          <root url="file://$MODULE_DIR$/../out/artifacts/Server_Web_exploded/WEB-INF/lib/Server/DTO/src" />
+          <root url="file://$MODULE_DIR$/../out/artifacts/Server_Web_exploded/WEB-INF/lib/Server/Logic/src" />
+          <root url="file://$MODULE_DIR$/../out/artifacts/Server_Web_exploded/WEB-INF/lib/Server/src" />
+          <root url="file://$MODULE_DIR$/../out/artifacts/Server_Web_exploded/WEB-INF/lib/User/src" />
+          <root url="file://$MODULE_DIR$/../DTO/src" />
+          <root url="file://$MODULE_DIR$/../Admins/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Tomcat 10.0.11" level="application_server_libraries" />
+    <orderEntry type="module" module-name="DTO" />
+  </component>
+</module>

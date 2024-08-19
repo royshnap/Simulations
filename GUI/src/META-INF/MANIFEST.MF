@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+MainUser-Class: MainApp
+Class-Path: Logic.jar Facade.jar
+
